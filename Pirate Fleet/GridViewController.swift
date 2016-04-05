@@ -218,6 +218,9 @@ extension GridViewController {
         return (end.x >= Settings.DefaultGridSize.width || end.y >= Settings.DefaultGridSize.height || start.x < 0 || end.x < 0)
     }
     
+    /*
+     do not allow to add more ships than needed
+     */
     private func isShipRequired(ship: Ship) -> Bool {
         if let shipSize = ShipSize(rawValue: ship.length) {
             return shipCounts[shipSize] < Settings.RequiredShips[shipSize]

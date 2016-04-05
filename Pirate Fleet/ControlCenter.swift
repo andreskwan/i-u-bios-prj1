@@ -17,13 +17,22 @@ struct Ship {
     let isVertical: Bool
 }
 
+/*
+ adding Mines
+ after adding the properties, error stops, that means that the 
+ protocol _Mine_ was conformed
+ */
+struct Mine: _Mine_ {
+    let location: GridLocation
+    let explosionText: String
+}
+
 class ControlCenter {
     
     func addShipsAndMines(human: Human) {
-//        <#WRITE YOUR CODE HERE!#>
+        
         let smallShip = Ship(length: 2, location: GridLocation(x: 3,y: 0), isVertical: false)
         let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false)
-        let mediumShip3 = Ship(length: 3, location: GridLocation(x: 6, y: 0), isVertical: true)
         let mediumShip2 = Ship(length: 3, location: GridLocation(x: 7, y: 0), isVertical: true)
         let largeShip = Ship(length: 4, location: GridLocation(x: 0,y: 4), isVertical: false)
         let extraLargeShip = Ship(length: 5, location: GridLocation(x: 0, y: 5), isVertical: false)
@@ -31,10 +40,15 @@ class ControlCenter {
         human.addShipToGrid(smallShip)
         human.addShipToGrid(mediumShip1)
         human.addShipToGrid(mediumShip2)
-        //can't be added to the grid, why? 
-        human.addShipToGrid(mediumShip3)
         human.addShipToGrid(largeShip)
         human.addShipToGrid(extraLargeShip)
+        
+        //mines
+        let mine1 = Mine(location: GridLocation(x: 1, y: 1), explosionText: "Cabum Motherfucker!!!")
+        let mine2 = Mine(location: GridLocation(x: 1, y: 2), explosionText: "Die!!!")
+        
+        human.addMineToGrid(mine1)
+        human.addMineToGrid(mine2)
     }
     
     func calculateFinalScore(gameStats: GameStats) -> Int {
