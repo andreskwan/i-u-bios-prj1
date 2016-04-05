@@ -35,6 +35,7 @@
 		A9DDAF261B9629AD00D64CD7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DDAF251B9629AD00D64CD7 /* Functions.swift */; };
 		A9EAC0BB1B8FD833008AD77B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EAC0BA1B8FD833008AD77B /* Player.swift */; };
 		A9EAC0BD1B8FDE98008AD77B /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EAC0BC1B8FDE98008AD77B /* Human.swift */; };
+		EA51977B1CB37459009F9455 /* Settings+TotalShips.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA51977A1CB37459009F9455 /* Settings+TotalShips.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		A9DDAF251B9629AD00D64CD7 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A9EAC0BA1B8FD833008AD77B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A9EAC0BC1B8FDE98008AD77B /* Human.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		EA51977A1CB37459009F9455 /* Settings+TotalShips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+TotalShips.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				A9C2B4921B8E2E37007983DB /* Assets */,
 				A9C2B4721B8E2D79007983DB /* Settings.swift */,
+				EA51977A1CB37459009F9455 /* Settings+TotalShips.swift */,
 				A9C2B45B1B8E2D38007983DB /* AppDelegate.swift */,
 				A9C2B4711B8E2D79007983DB /* PirateFleetViewController.swift */,
 				A907D9471B9540B100957634 /* Grid */,
@@ -286,6 +289,7 @@
 				A9D83B5F1B97881C00EBA850 /* ControlCenter.swift in Sources */,
 				A9C2B4821B8E2D79007983DB /* GridViewController.swift in Sources */,
 				A9C2B45C1B8E2D38007983DB /* AppDelegate.swift in Sources */,
+				EA51977B1CB37459009F9455 /* Settings+TotalShips.swift in Sources */,
 				A932F7F01B8E6DE2009E89A9 /* Structs.swift in Sources */,
 				A938F02D1BDEEB7A007E4548 /* Protocols.swift in Sources */,
 				A9EAC0BD1B8FDE98008AD77B /* Human.swift in Sources */,

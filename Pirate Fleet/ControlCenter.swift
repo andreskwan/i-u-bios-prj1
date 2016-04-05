@@ -54,21 +54,19 @@ class ControlCenter {
     func calculateFinalScore(gameStats: GameStats) -> Int {
         
         var finalScore: Int
-        var totalShips = 0
-        //Refactor - should be an extension for Settings
-        for (_,value) in Settings.RequiredShips {
-            totalShips = totalShips + value
-        }
+        let totalShips = Settings.totalShips()
         let enemyShipsSunk = totalShips - gameStats.enemyShipsRemaining //totalShips - remainingShips
         print("enemy ships sunk: \(enemyShipsSunk)")
         let humanShipsRemaining = totalShips - gameStats.humanShipsSunk
         print("human ships remaining: \(humanShipsRemaining)")
         let numberOfGuesses = gameStats.numberOfHitsOnEnemy + gameStats.numberOfMissesByHuman
         print("number of guesses: \(numberOfGuesses)")
+        print("guess penalty: \(gameStats.guessPenalty)")
         let enemyShipsSunkBonus = enemyShipsSunk * gameStats.sinkBonus
         print("sink bonus: \(gameStats.sinkBonus)\nenemy ships sunk bonus: \(enemyShipsSunkBonus) ")
         let humanShipsRemainigBonus = humanShipsRemaining * gameStats.sinkBonus
         print("human ships remainig bonus: \(humanShipsRemainigBonus) ")
+        
         finalScore = enemyShipsSunkBonus + humanShipsRemainigBonus - (numberOfGuesses * gameStats.guessPenalty)
         return finalScore
     }
