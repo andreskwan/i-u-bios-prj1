@@ -21,15 +21,19 @@ class ControlCenter {
     
     func addShipsAndMines(human: Human) {
 //        <#WRITE YOUR CODE HERE!#>
+        let smallShip = Ship(length: 2, location: GridLocation(x: 3,y: 0), isVertical: false)
         let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false)
+        let mediumShip3 = Ship(length: 3, location: GridLocation(x: 6, y: 0), isVertical: true)
         let mediumShip2 = Ship(length: 3, location: GridLocation(x: 7, y: 0), isVertical: true)
+        let largeShip = Ship(length: 4, location: GridLocation(x: 0,y: 4), isVertical: false)
+        let extraLargeShip = Ship(length: 5, location: GridLocation(x: 0, y: 5), isVertical: false)
+        
+        human.addShipToGrid(smallShip)
         human.addShipToGrid(mediumShip1)
         human.addShipToGrid(mediumShip2)
-        let smallShip = Ship(length: 2, location: GridLocation(x: 3,y: 0), isVertical: false)
-        human.addShipToGrid(smallShip)
-        let largeShip = Ship(length: 4, location: GridLocation(x: 0,y: 4), isVertical: false)
+        //can't be added to the grid, why? 
+        human.addShipToGrid(mediumShip3)
         human.addShipToGrid(largeShip)
-        let extraLargeShip = Ship(length: 5, location: GridLocation(x: 0, y: 5), isVertical: false)
         human.addShipToGrid(extraLargeShip)
     }
     
